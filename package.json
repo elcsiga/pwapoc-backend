@@ -1,0 +1,29 @@
+{
+    "name": "pwapoc-backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/server.js",
+    "scripts": {
+        "clean": "node ./node_modules/rimraf/bin.js dist",
+        "compile": "node ./node_modules/typescript/lib/tsc.js",
+        "run": "node dist/server.js",
+        "start": "npm run clean && npm run compile && npm run run",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "@types/cors": "^2.8.4",
+        "@types/express": "^4.16.0",
+        "@types/node": "^10.12.18",
+        "body-parser": "^1.18.3",
+        "cors": "^2.8.4",
+        "express": "^4.16.3"
+    },
+    "devDependencies": {
+        "codelyzer": "^5.0.0",
+        "copyfiles": "^2.1.0",
+        "rimraf": "^2.6.3",
+        "tslint": "^5.15.0",
+        "typescript": "^3.0.3"
+    }
+}
