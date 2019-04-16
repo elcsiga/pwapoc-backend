@@ -7,11 +7,12 @@ export class ServerError extends Error {
 export function sendError(res, status: number, message: string, error?: any) {
     console.error('ERROR', message, status);
     res.status(status);
-    res.json({
+
+    setTimeout(() => res.json({
         status: status,
         message: message,
         error: error
-    });
+    }), 1000);
 }
 
 export const errorHandler = (err, req, res, next) => {
